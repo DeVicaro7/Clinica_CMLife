@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap")
+}
+
+/* LAYOUT MOBILE */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100vw;
+    font-family: "Source Sans Pro", sans-serif;
+    color: grey;
+    scrollbar-width: none;
+}
+.logo {
+    width: 7em;
+    margin: 0;
+}
+span {
+    font-weight: bold;
+    color: grey;
+}
+section#banner-topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    width: 100vw;
+}
+nav#links-topo {
+    border-top: 1px solid black;
+    display: inline-block;
+}
+nav#links-topo > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 calc(1em / 1.2);
+}
+div#corpo > section.link-especialidades {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: calc(1em / 1.8);
+}
+div#corpo > section.link-especialidades > a {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.85em;
+    color: gray;
+    text-decoration: none;
+    border-bottom: 2px solid aqua;
+    text-align: center;
+    margin: 0.3em;
+}
+div.container-table > h1 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 1.5em auto;
+}
+div.container-table > h1.title::after {
+    margin: 0.7em auto;
+    width: 80vw;
+    font-size: 0.5em;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap column;
+}
+div.container-table > h1#ortopedia::after {
+content: "A ortopedia é a especialidade médica que cuida da saúde relacionadas aos elementos do aparelho locomotor, como ossos, músculos, ligamentos e articulações.";
+}
+div.container-table > h1#pediatria::after {
+    content: "A pediatria é a especialidade médica dedicada à assistência à criança e ao adolescente, nos seus diversos aspectos, sejam eles preventivos ou curativos.";
+}
+div.container-table > h1#geriatria::after {
+    content: "Medicina geriátrica ou geriatria é o ramo da medicina que foca o estudo, a prevenção e o tratamento de doenças e da incapacidade em idades avançadas.";
+}
+div.container-table > h1#psicologia::after {
+    content: "Psicologia é a especialidade médica que trata da mente, do estudo e análise de seus processos e comportamento de indivíduos e grupos humanos em diferentes situações.";
+}
+div.container-table > h1#fisioterapia::after {
+    content: "Fisioterapia é uma ciência da saúde aplicada ao estudo, diagnóstico, prevenção e tratamento de disfunções cinéticas funcionais de órgãos e sistemas.";
+}
+div.container-table > section.secao-especialidades  table.table {
+    border-collapse: collapse;
+    margin: 2em auto;
+    width: 100%;
+    height: 8em;
+}
+div.container-table > section.secao-especialidades > figure > img {
+    display: none;
+}
+div.container-table > section.secao-especialidades > table.table > caption {
+    font-weight: bold;
+}
+div.container-table > section.secao-especialidades > table.table > thead {
+    background-color: aqua;
+    color: white;
+    font-size: calc(1em / 1.1);
+    width: 100%;
+    height: 2em;
+    text-align: left;
+}
+div.container-table > section.secao-especialidades > table.table > tbody {
+    font-size: calc(1em / 1.5);
+    text-align: left;
+}
+div.container-table > section.secao-especialidades > table.table > tbody > tr:nth-of-type(odd){
+    background-color: rgb(180, 178, 178);
+    color: white;
+    font-size: bold;
+}
+div#rodape {
+    text-align: center;
+    background-color: rgb(0, 153, 173);
+    color: white;
+    font-weight: bold;
+}
+div#rodape > article {
+    margin: 1em;
+    font-size: calc(1em / 1.2);
+}
+div#rodape > article > p#direitos {
+    font-size: calc(1em / 1.5);
+}
+/* LAYOUT TABLET */
+@media only screen and (min-width: 426px) and (max-width: 1023px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        padding: calc(1em / 1.1);
+    }
+    section#banner-topo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        width: 100vw;
+    }
+    nav#links-topo {
+        border: none;
+        display: inline-block;
+    }
+    nav#links-topo > a {
+        margin: 0 calc(1em / 1.5);
+    }
+    div#corpo > section.link-especialidades > a {
+        font-size: 0.75em;
+    }
+}
+/* LAYOUT DESKTOP */
+@media only screen and (min-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    header, footer {
+        width: 100vw;
+    }
+    main {
+        margin: 0 10em;
+    }
+    section#banner-topo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        width: 100vw;
+    }
+    nav#links-topo {
+        border: none;
+        display: inline-block;
+    }
+    nav#links-topo > a {
+        margin: 0 calc(1em / 1.8);
+    }
+    div#corpo > section.link-especialidades {
+        padding: calc(1em / 2.5);
+    }
+    div#corpo > section.link-especialidades > a {
+        font-size: 0.9em;
+        margin: 0.1em;
+    }
+    div.container-table {
+        margin: 0 auto;
+    }
+    div.container-table > h1 {
+        font-size: 1.2em;
+    }
+    div.container-table > h1.title::after {
+        width: 50%;
+        font-size: 0.8em;
+    }
+    div.container-table > section.secao-especialidades {
+        width: 50vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    div.container-table > section.secao-especialidades > figure > img {
+        display: inline;
+        height: 22.5vh;
+        width: 18vw;
+        box-shadow: 0px 0px 2px grey;
+    }
+    div.container-table > section.secao-especialidades > table.table {
+        height: 20vh;
+        margin: 2em auto;
+        box-shadow: 0px 0px 4px grey;
+    }
+    div.container-table > section.secao-especialidades > table.table > thead > tr {
+        height: 2.6em;
+    }
+    div.container-table > section.secao-especialidades > table.table > tbody > tr {
+        height: 4.8em;
+    }
+    div.container-table > section#secao-geriatria > figure > img {
+        height: 28.8vh;
+        width: 18vw;
+    }
+    div.container-table > section#secao-fisioterapia > figure > img {
+        height: 34.8vh;
+        width: 18vw;
+    }
+}
+/* VERIFICAR ALTERNATIVA PARA A CRIAÇÃO DE CLASSES E MODIFICAÇÃO DE TODO O CÓDIGO EM TABELAS (TAble), E INSERÇÃO DE IMAGENS NO LAYOUT DESKTOP */

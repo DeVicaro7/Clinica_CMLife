@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+}
+
+/* LAYOUT MOBILE: */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100vw;
+    font-family: "Source Sans Pro", sans-serif;
+    color: grey;
+}
+.logo {
+    width: 7em;
+    margin: 0;
+}
+span {
+    font-weight: bold;
+    color: grey;
+}
+section#banner-topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    width: 100vw;
+}
+nav#links-topo {
+    border-top: 1px solid black;
+    display: inline-block;
+}
+nav#links-topo > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 calc(1em / 1.2);
+}
+section#homepage > article#banner-home::before {
+    content: "";
+    background: url("Clinica/assets/recepcao.png")no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    height: 30vh;
+    width: 100vw;
+}
+section#homepage > article#banner-home > h1 {
+    position: relative;
+    color: white;
+    text-align: left;
+    bottom: -5rem;
+    font-size: 1em;
+    margin-bottom: 12em;
+}
+section#sobre {
+    margin: 2em 0;
+    text-align: center;
+}
+section#sobre > h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+nav#lista-nav {
+    margin: 2em 0;
+}
+nav#lista-nav > h2 {
+    font-size: 1em;
+    margin: 1em 0;
+    text-align: center;
+}
+nav#lista-nav > figure {
+    display: none;
+}
+nav#lista-nav > ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+    margin-left: 1em;
+    font-size: 1em;
+}
+section#especialidades > h2 {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1em 0;
+    text-align: center;
+}
+section#especialidades > article {
+    font-size: 1em;
+    margin: 1em 0;
+    text-align: center;
+}
+section#imagens-especialidades {
+    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2em 0;
+}
+section#imagens-especialidades > figure {
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px calc(1em / 2) rgb(80, 80, 80);
+    margin: 1em 0;
+    border-radius: 1px;
+}
+section#imagens-especialidades > figure > figcaption {
+    font-weight: bold;
+    font-size: 1em;
+    opacity: 50%;
+    margin: calc(1em / 2) 0;
+}
+section#imagens-especialidades > figure > img {
+    width: 18em;
+}
+section#horarios {
+    text-align: center;
+}
+section#horarios > nav > a#botao > button {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: aqua;
+    color: white;
+    border: 0;
+    border-radius: 2px;
+    padding: calc(1em / 2.5);
+}
+section#contatos {
+    margin: 2em 0;
+    text-align: center;
+}
+section#contatos > h2, section#contatos > article {
+    margin: 2em 0;
+    font-size: 1em;
+}
+section#contatos > article > p > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: grey;
+}
+section#contatos > iframe {
+    width: 90vw;
+    height: 40vh;
+    margin: auto;
+    box-sizing: content-box;
+}
+div#rodape {
+    text-align: center;
+    background-color: rgb(0, 153, 173);
+    color: white;
+    font-weight: bold;
+}
+div#rodape > article {
+    margin: 1em;
+    font-size: calc(1em / 1.2);
+}
+div#rodape > article > p#direitos {
+    font-size: calc(1em / 1.5);
+}
+
+/* LAYOUT TABLET */
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    section#banner-topo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        width: 100vw;
+        padding: calc(1em / 6);
+    }
+    nav#links-topo {
+        border-top: none;
+        display: inline-block;
+    }
+    nav#links-topo > a {
+        border-top: none;
+        display: inline-block;
+        margin: 0 calc(1em / 3);
+    }
+    nav#lista-nav > ul {
+        margin-left: 5em;
+    }
+    section#homepage > article#banner-home > h1 {
+        font-size: 2em;
+        margin-bottom: 6em;
+    }
+    section#imagens-especialidades {
+        justify-content: space-evenly;
+    }
+    section#imagens-especialidades > figure > img {
+        width: 20em;
+    }
+}
+
+/* LAYOUT DESKTOP */
+@media only screen and (min-width: 1025px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    section#banner-topo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        width: 100vw;
+        padding: calc(1em / 8);
+    }
+    nav#links-topo {
+        border-top: none;
+        display: inline-block;
+    }
+    nav#links-topo > a {
+        border-top: none;
+        display: inline-block;
+        margin: 0 calc(1em / 3);
+    }
+    nav#lista-nav > ul {
+        margin-left: 5em;
+    }
+    section#homepage > article#banner-home > h1 {
+        font-size: 2em;
+        margin-bottom: 6em;
+    }
+    section#imagens-especialidades {
+        justify-content: space-evenly;
+    }
+    section#imagens-especialidades > figure > img {
+        width: 22em;
+    }
+}
